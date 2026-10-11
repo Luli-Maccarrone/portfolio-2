@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ludmila Maccarrone · Portfolio UGC</title>
+<meta name="description" content="Ludmila Maccarrone, creadora UGC en Buenos Aires: videos y fotos en primera persona para marcas de moda, belleza y lifestyle.">
+<meta name="theme-color" content="#0A0A0A">
+<meta property="og:title" content="Ludmila Maccarrone · Portfolio UGC">
+<meta property="og:description" content="Videos y fotos en primera persona para marcas de moda, belleza y lifestyle.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://luli-maccarrone.github.io/portfolio-2/">
+<meta property="og:site_name" content="Ludmila Maccarrone">
+<meta property="og:locale" content="es_AR">
+<meta property="og:image" content="https://luli-maccarrone.github.io/portfolio-2/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ludmila Maccarrone, Portfolio UGC">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://luli-maccarrone.github.io/portfolio-2/img/og.jpg">
+<link rel="canonical" href="https://luli-maccarrone.github.io/portfolio-2/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+/* Concept: a creator's viewfinder. A REC dot and real running time on the videos, a live dot on her availability; no rules, spacing and weight do the separating.
+   Layout: image-led landscape spreads. Photos bleed to the slide edge; type is Helvetica (Inter where it is not installed) used at two extremes, very large and light against tiny tracked caps. No boxes, no rounded corners. Single light look by choice. */
+:root{
+  --page:#D9D5CE; --paper:#F3F1EC; --char:#1E1E1D;
+  --ink:#1B1B1A; --muted:#75716A; --line:#CDC8BF; --slot:#D8D3CA; --accent:#E23B1F;
+  --display:"Helvetica Neue",Helvetica,"Inter",Arial,sans-serif;
+}
+/* night: the same spreads on near-black; the video slide lifts one step so it still reads as a break */
+body.night{--accent:#FF4B2B; --page:#0A0A0A; --paper:#141413; --char:#222220; --ink:#F1EEE8; --muted:#9F9B93; --line:#3A3835; --slot:#262523; color-scheme:dark}
+body.night .sheet.dark{--line:#4A4844;--slot:#33322F}
+*{box-sizing:border-box}
+body{background:var(--page);color:var(--ink);font-family:var(--display);font-weight:400;font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{list-style:none;padding:0}
+
+/* toolbar (never exported) */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--page);border-bottom:1px solid var(--line);padding:10px 16px}
+.bar-in{max-width:1120px;margin-inline:auto;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
+.bar p{margin:0;flex:1 1 220px;min-width:0;font-size:13px;color:var(--muted)}
+.btn{border:1px solid var(--ink);background:transparent;border-radius:0;padding:8px 16px;font-weight:500;font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+.btn.primary,.btn[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.btn:disabled{opacity:.5;cursor:default}
+
+/* folio */
+.wrap{padding-inline:16px;padding-block:24px 64px}
+.folio{max-width:1120px;margin-inline:auto;container-type:inline-size;container-name:folio;display:flex;flex-direction:column;gap:20px}
+.sheet{--pad:clamp(20px,5cqw,56px);position:relative;overflow:hidden;background:var(--paper);color:var(--ink);padding:var(--pad);padding-bottom:calc(var(--pad)*.8);display:flex;flex-direction:column;gap:clamp(16px,2.6cqw,28px)}
+.sheet.dark{background:var(--char);color:#F3F1EC;--ink:#F3F1EC;--muted:#A19D95;--line:#474541;--slot:#33322F}
+.top{display:flex;align-items:center;gap:14px;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase}
+.mono{font-size:13px;font-weight:700;letter-spacing:-.02em;line-height:1}
+.top i{flex:1;min-width:20px}
+.body{flex:1;display:flex;flex-direction:column;justify-content:center;gap:clamp(16px,2.6cqw,30px);min-width:0}
+
+h1,h2{font-weight:300;text-transform:uppercase;letter-spacing:-.04em;line-height:.9;text-wrap:balance}
+h1{font-size:clamp(2.2rem,5.9cqw,4.25rem);overflow-wrap:break-word;max-width:100%}
+/* weight play: one word of each title set heavy against the light rest */
+h1 .bd,h2 .bd{font-weight:700;letter-spacing:-.055em}
+h1.two>span{display:block}
+h2{font-size:clamp(2rem,5.8cqw,4.1rem)}
+.label.muted{font-weight:400}
+h3{font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;line-height:1.4}
+.label{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.lead{font-size:clamp(1rem,1.9cqw,1.15rem);font-weight:300;line-height:1.45;max-width:28em}
+.muted{color:var(--muted)}
+.mark{align-self:flex-start;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;display:inline-flex;align-items:center;gap:9px}
+.mark::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);flex:none}
+
+/* photos */
+.frame{position:relative;overflow:hidden;background:var(--slot);min-width:0}
+.shot{position:absolute;inset:0;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center}
+.up{position:relative;z-index:1;border:1px solid #F3F1EC;background:#F3F1EC;color:#1B1B1A;padding:5px 10px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+.shot.has-img .up{display:none}
+.editing .shot.has-img .up{display:inline-block}
+.vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* videos carry a REC dot and their real running time */
+.rec{position:absolute;top:8px;left:8px;z-index:1;display:inline-flex;align-items:center;gap:5px;color:#F3F1EC;background:#1B1B1A;font-size:9px;font-weight:700;letter-spacing:.08em;padding:3px 6px;font-variant-numeric:tabular-nums;pointer-events:none}
+.rec::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
+@keyframes blink{0%,55%{opacity:1}56%,100%{opacity:.15}}
+@keyframes live{0%,100%{opacity:1}50%{opacity:.35}}
+@media (prefers-reduced-motion:no-preference){.rec::before{animation:blink 1.4s linear infinite}.mark::before{animation:live 2.4s ease-in-out infinite}}
+.say{font-weight:700;font-size:clamp(1.25rem,2.9cqw,1.9rem);line-height:1.08;letter-spacing:-.03em;max-width:16em;text-wrap:balance}
+
+/* spreads: text on one side, a photo running to the slide edge on the other */
+.sheet.bleed{padding:0;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:0}
+.sheet.bleed.rev{grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr)}
+.bleed .txt{padding:var(--pad);padding-bottom:calc(var(--pad)*.8);display:flex;flex-direction:column;gap:clamp(16px,2.6cqw,28px);min-width:0}
+.bleed .pic{min-height:260px}
+.col{display:flex;flex-direction:column;align-items:flex-start;gap:clamp(12px,1.8cqw,18px);min-width:0}
+.socials{display:flex;flex-direction:column;gap:4px}
+.socials a,.socials span.row{display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;color:var(--ink);text-decoration:none;font-size:14px;font-weight:500;max-width:100%}
+.socials a>span,.socials .row>span{overflow-wrap:anywhere;min-width:0}
+.socials a>span{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .4s cubic-bezier(.2,.7,.2,1)}
+.socials a:hover>span,.socials a:focus-visible>span{background-size:100% 1px}
+.socials small{font-size:10px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);min-width:5.6rem}
+.copy{border:0;border-bottom:1px solid var(--ink);background:transparent;padding:0;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px}
+.facts>div{padding-block:8px}
+.facts dt{font-size:10px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.facts dd{font-size:14px;font-weight:500;line-height:1.35}
+
+/* lookbook strips run edge to edge */
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.strip{display:grid;gap:6px;margin-inline:calc(var(--pad)*-1)}
+.looks{grid-template-columns:repeat(4,minmax(0,1fr))}
+.looks .frame{aspect-ratio:2/3}
+/* lookbook: an oversized word the photos climb onto, columns stepped instead of level */
+.big .head{align-items:flex-end;position:relative}
+.big h2{font-size:clamp(3.4rem,14.5cqw,10.6rem);line-height:.78;margin-bottom:-.2em;white-space:nowrap}
+.big .head .label{padding-bottom:.9em}
+.big .strip{position:relative;z-index:1}
+.big .looks figure:nth-child(even){margin-top:clamp(18px,4.4cqw,50px)}
+.looks figcaption .muted{font-variant-numeric:tabular-nums}
+.reels{grid-template-columns:repeat(7,minmax(0,1fr))}
+.reels .frame{aspect-ratio:9/16}
+.strip figcaption{display:flex;flex-direction:column;gap:1px;padding:8px 8px 0;font-size:11px;font-weight:700;min-width:0}
+.strip figcaption span{overflow-wrap:anywhere}
+.strip figcaption .muted{font-weight:400;font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+.wip{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+
+/* typographic lists */
+.formats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(24px,5cqw,56px)}
+.formats li{padding-block:13px;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:16px;align-items:baseline}
+.formats p{color:var(--muted);font-size:13px;font-weight:300}
+.specs{display:flex;flex-wrap:wrap;gap:6px 24px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.brands li{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.8fr) minmax(0,.9fr);gap:16px;align-items:baseline;padding-block:clamp(7px,1.3cqw,12px)}
+.brands b{font-weight:700!important;letter-spacing:-.05em!important}
+.brands b,.brands strong{font-weight:300;font-size:clamp(1.4rem,3.6cqw,2.5rem);line-height:1;letter-spacing:-.04em;text-transform:uppercase;overflow-wrap:anywhere;min-width:0}
+.brands strong{font-variant-numeric:tabular-nums;text-align:right}
+.brands small{font-size:10px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.brands .fig{display:flex;flex-direction:column;align-items:flex-end;gap:2px;min-width:0}
+.fl{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,5cqw,56px)}
+.duo>div{display:flex;flex-direction:column;gap:10px;min-width:0}
+.rows li{display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:12px;align-items:baseline;padding-block:9px}
+.rows p{color:var(--muted);font-size:13px;font-weight:300}
+.rows h3 i{font-style:normal;font-weight:300;color:var(--muted);margin-right:.6em;font-variant-numeric:tabular-nums}
+
+/* edit mode */
+.editing [data-k]{outline:1px dashed var(--muted);outline-offset:3px;cursor:text}
+.editing [data-k]:focus{outline:1px solid var(--ink)}
+
+/* motion */
+.shot{transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+@media (hover:hover){.frame:hover .shot{transform:scale(1.04)}}
+.anim .rv{transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--i,0)*70ms)}
+.anim .sheet.pre .rv{opacity:0;transform:translateY(18px)}
+.anim h1.rv,.anim h2.rv{transition:clip-path 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);clip-path:inset(-10% -5% -10% -5%)}
+.anim .sheet.pre h1.rv,.anim .sheet.pre h2.rv{opacity:1;clip-path:inset(0 -5% 100% -5%);transform:translateY(.3em)}
+.anim .sheet.pre .shot{transform:scale(1.08)}
+@media (prefers-reduced-motion:reduce){.shot,.anim .rv,.anim .top i{transition:none!important}}
+
+@container folio (min-width:900px){ .sheet{aspect-ratio:1123/794} }
+@container folio (max-width:900px){
+  .reels{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .formats li{grid-template-columns:minmax(0,1fr);gap:4px}
+}
+@container folio (max-width:640px){
+  .sheet.bleed,.sheet.bleed.rev{grid-template-columns:minmax(0,1fr)}
+  .bleed .pic{aspect-ratio:4/5;order:-1}
+  .looks{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .reels{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .formats,.duo,.facts{grid-template-columns:minmax(0,1fr)}
+  .brands li{grid-template-columns:minmax(0,1fr) auto}
+  .brands small{grid-column:1;grid-row:2}
+  .brands .fig{grid-column:2;grid-row:1 / span 2}
+  .rows li{grid-template-columns:7.4rem minmax(0,1fr)}
+}
+
+/* PDF stage: landscape A4 slides at 1123 x 794; mobile PDF at phone width */
+.stage{position:fixed;left:-10000px;top:0;width:1123px}
+.pdf{max-width:none!important;width:1123px;gap:0!important}
+.pdf .sheet{--pad:56px;width:1123px;height:794px;aspect-ratio:auto}
+.pdf .up,.pdf .copy,.pdf .vid{display:none!important}
+.pdf .rec::before,.pdf .mark::before{animation:none!important}
+.pdf .rv,.pdf .top i,.pdf .shot{opacity:1!important;transform:none!important;transition:none!important;clip-path:none!important}
+.pdf.m{width:430px}
+.pdf.m .sheet{--pad:24px;width:430px;height:auto;min-height:764px}
+@media (prefers-reduced-motion:no-preference){.btn{transition:background-color .15s,color .15s}}
+</style>
+</head>
+<body class="night">
+
+<div class="bar">
+  <div class="bar-in">
+    <p id="status" role="status">Ludmila Maccarrone · Portfolio UGC</p>
+    <button class="btn" id="theme" type="button">Modo día</button>
+    <button class="btn" id="edit" type="button" aria-pressed="false" hidden>Editar</button>
+    <button class="btn" id="reset" type="button" hidden>Restablecer</button>
+    <button class="btn primary" id="pdf" type="button" disabled>PDF horizontal</button>
+    <button class="btn primary" id="pdfm" type="button" disabled>PDF móvil</button>
+  </div>
+</div>
+
+<div class="wrap">
+<main id="folio" class="folio">
+
+  <section class="sheet bleed">
+    <div class="txt">
+      <div class="top"><b class="mono" data-mirror="mono"></b><span data-k="niches">Lifestyle — Moda — Belleza</span><i></i><span class="pn"></span></div>
+      <div class="body">
+        <div class="col">
+          <h1 class="two"><span data-k="name">Ludmila</span> <span class="bd" data-k="nameb">Maccarrone</span></h1>
+          <p class="label" data-k="eyebrow">Portfolio UGC</p>
+          <p class="lead" data-k="tagline">Contenido real para marcas de moda, belleza y lifestyle.</p>
+          <ul class="socials">
+            <li><a data-link="tiktok" href="https://www.tiktok.com/@lulimaccarrone" target="_blank" rel="noopener"><small>TikTok</small><span data-mirror="tiktok"></span></a></li>
+            <li><a data-link="instagram" href="https://www.instagram.com/lulimaccarrone/" target="_blank" rel="noopener"><small>Instagram</small><span data-mirror="instagram"></span></a></li>
+          </ul>
+          <span class="mark" data-k="sticker">Agenda abierta</span>
+        </div>
+      </div>
+    </div>
+    <div class="frame pic"><div class="shot" data-img="cover" data-src="img/look-l.jpg"><button class="up" type="button"></button></div></div>
+  </section>
+
+  <section class="sheet">
+    <div class="top"><b class="mono" data-mirror="mono"></b><span>Fotografía</span><i></i><span class="pn"></span></div>
+    <div class="body big">
+      <div class="head"><h2><span class="bd" data-k="looks-h">Moda</span></h2><p class="label muted" data-k="looks-n">Street style y editorial</p></div>
+      <div class="strip looks">
+        <figure><div class="frame"><div class="shot" data-img="k1" data-src="img/t09.jpg"><button class="up" type="button"></button></div></div><figcaption><span class="muted">01 / 04</span></figcaption></figure>
+        <figure><div class="frame"><div class="shot" data-img="k2" data-src="img/n3.jpg"><button class="up" type="button"></button></div></div><figcaption><span class="muted">02 / 04</span></figcaption></figure>
+        <figure><div class="frame"><div class="shot" data-img="k3" data-src="img/t03.jpg"><button class="up" type="button"></button></div></div><figcaption><span class="muted">03 / 04</span></figcaption></figure>
+        <figure><div class="frame"><div class="shot" data-img="k4" data-src="img/n1.jpg"><button class="up" type="button"></button></div></div><figcaption><span class="muted">04 / 04</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet bleed rev">
+    <div class="frame pic"><div class="shot" data-img="about" data-src="img/cover.jpg"><button class="up" type="button"></button></div></div>
+    <div class="txt">
+      <div class="top"><b class="mono" data-mirror="mono"></b><span>Sobre mí</span><i></i><span class="pn"></span></div>
+      <div class="body">
+        <h2><span data-k="about-h">Sobre</span> <span class="bd" data-k="about-hb">mí</span></h2>
+        <p class="say" data-k="about-q">Grabo como se lo contaría a una amiga.</p>
+        <p class="lead" data-k="about-1">Soy Ludmila, creadora de contenido en Buenos Aires. Hago videos y fotos en primera persona, con el producto en uso real y una estética cuidada.</p>
+        <p class="muted" data-k="about-2">Trabajo con marcas de moda, belleza y lifestyle que quieren verse como las ve su audiencia.</p>
+        <dl class="facts">
+          <div><dt>Base</dt><dd data-k="f-base">Buenos Aires, Argentina</dd></div>
+          <div><dt>Idioma</dt><dd data-k="f-lang">Español</dd></div>
+          <div><dt>Equipo</dt><dd data-k="f-gear">iPhone 17 Pro, aro de luz, micrófono</dd></div>
+          <div><dt>Locación</dt><dd data-k="f-loc">Exteriores con luz natural</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="top"><b class="mono" data-mirror="mono"></b><span>Fotografía</span><i></i><span class="pn"></span></div>
+    <div class="body big">
+      <div class="head"><h2><span class="bd" data-k="prod-h">Producto</span></h2><p class="label muted" data-k="prod-n">Detalle, textura y luz</p></div>
+      <div class="strip looks">
+        <figure><div class="frame"><div class="shot" data-img="d1" data-src="img/t04.jpg"><button class="up" type="button"></button></div></div><figcaption><span class="muted">01 / 04</span></figcaption></figure>
+        <figure><div class="frame"><div class="shot" data-img="d2" data-src="img/t02.jpg"><button class="up" type="button"></button></div></div><figcaption><span class="muted">02 / 04</span></figcaption></figure>
+        <figure><div class="frame"><div class="shot" data-img="d3" data-src="img/t10.jpg"><button class="up" type="button"></button></div></div><figcaption><span class="muted">03 / 04</span></figcaption></figure>
+        <figure><div class="frame"><div class="shot" data-img="d4" data-src="img/p-bohemia.jpg"><button class="up" type="button"></button></div></div><figcaption><span class="muted">04 / 04</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet dark">
+    <div class="top"><b class="mono" data-mirror="mono"></b><span>Video</span><i></i><span class="pn"></span></div>
+    <div class="body">
+      <h2><span data-k="formats-h">Contenido</span> <span class="bd" data-k="formats-hb">en video</span></h2>
+      <ul class="formats">
+        <li><h3 data-k="fm1">Unboxing y primera impresión</h3><p data-k="fm1d">Abro el paquete en cámara y cuento qué me llamó la atención.</p></li>
+        <li><h3 data-k="fm2">Testimonio en cámara</h3><p data-k="fm2d">Cuento a cámara qué problema me resuelve y cómo lo uso.</p></li>
+        <li><h3 data-k="fm3">Tutorial paso a paso</h3><p data-k="fm3d">Muestro cómo se usa, de principio a fin, en menos de un minuto.</p></li>
+        <li><h3 data-k="fm4">Get ready with me</h3><p data-k="fm4d">El producto dentro de mi rutina, sin que se sienta como un aviso.</p></li>
+        <li><h3 data-k="fm5">Voz en off con tomas de producto</h3><p data-k="fm5d">Planos detalle con relato grabado aparte, ideal para pauta.</p></li>
+        <li><h3 data-k="fm6">Hooks para anuncios</h3><p data-k="fm6d">Tres aperturas distintas del mismo video para testear cuál rinde.</p></li>
+      </ul>
+      <ul class="specs"><li>9:16</li><li>1080 × 1920</li><li>15 a 60 s</li><li>MP4</li><li>Con y sin subtítulos</li></ul>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="top"><b class="mono" data-mirror="mono"></b><span>Marcas</span><i></i><span class="pn"></span></div>
+    <div class="body">
+      <h2><span class="bd" data-k="brands-h">Marcas</span> <span data-k="brands-hb">que me eligieron</span></h2>
+      <ul class="brands">
+        <li><b data-k="br1">Bohemia</b><small data-k="br1c">Accesorios</small><span class="fig"><strong data-k="br1f">5.834</strong><span class="fl">Comunidad en Instagram</span></span></li>
+        <li><b data-k="br2">La Clota</b><small data-k="br2c">Calzado</small><span class="fig"><strong data-k="br2f">10,4k</strong><span class="fl">Comunidad en Instagram</span></span></li>
+        <li><b data-k="br3">Puebla</b><small data-k="br3c">Velas y aromas</small><span class="fig"><strong data-k="br3f">17,8k</strong><span class="fl">Comunidad en Instagram</span></span></li>
+        <li><b data-k="br4">Extracto Importado</b><small data-k="br4c">Perfumes</small><span class="fig"><strong data-k="br4f">75,6k</strong><span class="fl">Comunidad en Instagram</span></span></li>
+        <li><b data-k="br5">Sweet</b><small data-k="br5c">Ropa</small><span class="fig"><strong data-k="br5f">432k</strong><span class="fl">Comunidad en Instagram</span></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="top"><b class="mono" data-mirror="mono"></b><span>Colaboraciones</span><i></i><span class="pn"></span></div>
+    <div class="body">
+      <h2><span class="bd" data-k="cases-h">Marca</span> <span data-k="cases-hb">por marca</span></h2>
+      <div class="strip reels">
+        <figure><div class="frame"><div class="shot" data-img="ph1" data-src="img/p-bohemia.jpg"><button class="up" type="button"></button></div></div><figcaption><span data-k="ph1h">@bohemia.acc</span><span class="muted" data-mirror="br1c"></span></figcaption></figure>
+        <figure><div class="frame"><div class="shot" data-img="ph2" data-src="img/look.jpg"><button class="up" type="button"></button></div></div><figcaption><span data-k="ph2h">@laclotazapatos</span><span class="muted" data-mirror="br2c"></span></figcaption></figure>
+        <figure><div class="frame"><div class="shot" data-img="ph3" data-src="img/p-puebla.jpg"><span class="rec">0:21</span><video class="vid" src="vid/puebla.mp4" muted loop playsinline preload="metadata" aria-label="Video para Puebla"></video><button class="up" type="button"></button></div></div><figcaption><span data-k="ph3h">@pueblaorganica</span><span class="muted" data-mirror="br3c"></span></figcaption></figure>
+        <figure><div class="frame"><div class="shot" data-img="ph6" data-src="img/p-puebla2.jpg"><span class="rec">0:28</span><video class="vid" src="vid/puebla2.mp4" muted loop playsinline preload="metadata" aria-label="Segundo video para Puebla"></video><button class="up" type="button"></button></div></div><figcaption><span data-mirror="ph3h"></span><span class="muted" data-mirror="br3c"></span></figcaption></figure>
+        <figure><div class="frame"><div class="shot" data-img="ph4" data-src="img/p-extracto.jpg"><span class="rec">0:27</span><video class="vid" src="vid/extracto.mp4" muted loop playsinline preload="metadata" aria-label="Video para Extracto Importado"></video><button class="up" type="button"></button></div></div><figcaption><span data-k="ph4h">@extractoimportado</span><span class="muted" data-mirror="br4c"></span></figcaption></figure>
+        <figure><div class="frame"><div class="shot" data-img="ph7" data-src="img/p-extracto2.jpg"><span class="rec">0:40</span><video class="vid" src="vid/extracto2.mp4" muted loop playsinline preload="metadata" aria-label="Segundo video para Extracto Importado"></video><button class="up" type="button"></button></div></div><figcaption><span data-mirror="ph4h"></span><span class="muted" data-mirror="br4c"></span></figcaption></figure>
+        <figure><div class="frame"><div class="shot" data-img="ph5"><span class="wip" data-k="ph5w">Próximamente</span><button class="up" type="button" hidden></button></div></div><figcaption><span data-k="ph5h">@sweetoficial</span><span class="muted" data-mirror="br5c"></span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="top"><b class="mono" data-mirror="mono"></b><span>Proceso</span><i></i><span class="pn"></span></div>
+    <div class="body">
+      <h2><span data-k="proc-h">Cómo</span> <span class="bd" data-k="proc-hb">trabajo</span></h2>
+      <div class="duo">
+        <div>
+          <p class="label muted">El proceso</p>
+          <ol class="rows">
+            <li><h3><i>01</i>Brief</h3><p data-k="st1">Me contás el producto, el objetivo y a quién le hablás.</p></li>
+            <li><h3><i>02</i>Guion</h3><p data-k="st2">Te envío el guion con los hooks para que lo apruebes antes de grabar.</p></li>
+            <li><h3><i>03</i>Grabación</h3><p data-k="st3">Grabo en vertical, con buena luz y audio limpio.</p></li>
+            <li><h3><i>04</i>Edición</h3><p data-k="st4">Cortes, subtítulos y música libre de derechos.</p></li>
+            <li><h3><i>05</i>Entrega</h3><p data-k="st5">Archivos finales, con una ronda de ajustes incluida.</p></li>
+          </ol>
+        </div>
+        <div>
+          <p class="label muted">Qué recibís</p>
+          <ul class="rows">
+            <li><h3 data-k="g1t">Vertical</h3><p data-k="g1">Video final en 9:16, listo para publicar.</p></li>
+            <li><h3 data-k="g2t">Versión limpia</h3><p data-k="g2">Sin texto ni música, lista para usar en pauta.</p></li>
+            <li><h3 data-k="g3t">Hooks</h3><p data-k="g3">Aperturas alternativas para testear, a pedido.</p></li>
+            <li><h3 data-k="g4t">5 a 7 días</h3><p data-k="g4">Hábiles, desde que recibo el producto.</p></li>
+            <li><h3 data-k="g5t">Derechos</h3><p data-k="g5">De uso en las redes de la marca. Pauta y plazos, según propuesta.</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet bleed rev">
+    <div class="frame pic"><div class="shot" data-img="closing" data-src="img/closing.jpg"><button class="up" type="button"></button></div></div>
+    <div class="txt">
+      <div class="top"><b class="mono" data-mirror="mono"></b><span>Contacto</span><i></i><span class="pn"></span></div>
+      <div class="body">
+        <div class="col">
+          <h1 class="two"><span data-k="cta-h">Trabajemos</span> <span class="bd" data-k="cta-hb">juntos</span></h1>
+          <p class="label" data-k="cta-p">Agenda abierta — Propuestas a medida</p>
+          <p class="lead" data-k="cta-l">Escribime con tu producto y tu objetivo, y te armo una propuesta.</p>
+          <ul class="socials">
+            <li><span class="row"><small>Mail</small><span data-k="email">lulimaccarrone@gmail.com</span><button class="copy" id="copy" type="button">Copiar</button></span></li>
+            <li><a data-link="tiktok" href="https://www.tiktok.com/@lulimaccarrone" target="_blank" rel="noopener"><small>TikTok</small><span data-k="tiktok">@lulimaccarrone</span></a></li>
+            <li><a data-link="instagram" href="https://www.instagram.com/lulimaccarrone/" target="_blank" rel="noopener"><small>Instagram</small><span data-k="instagram">@lulimaccarrone</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+</div>
+
+<input type="file" id="file" accept="image/*" hidden>
+
+<script>
+(function(){
+  var KEY='ugc-folio-editorial-v1';
+  var $=function(s,r){return (r||document).querySelector(s)};
+  var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  var folio=$('#folio'), statusEl=$('#status'), editBtn=$('#edit'), resetBtn=$('#reset'), pdfBtn=$('#pdf'), pdfmBtn=$('#pdfm'), fileIn=$('#file');
+  var defaults={}; $$('[data-k]').forEach(function(el){defaults[el.dataset.k]=el.textContent});
+  var state={text:{},img:{}};
+  try{var raw=localStorage.getItem(KEY); if(raw){var p=JSON.parse(raw); state.text=p.text||{}; state.img=p.img||{};}}catch(e){}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(state)); return true}catch(e){return false}}
+  function val(k){return (k in state.text)?state.text[k]:defaults[k]}
+  function say(t){statusEl.textContent=t}
+  function fullName(){return (val('name')+' '+val('nameb')).trim()}
+  function pad(n){return (n<10?'0':'')+n}
+  function number(root){var f=$$('.pn',root); f.forEach(function(el,i){el.textContent=pad(i+1)+' / '+pad(f.length)})}
+
+  function sync(){
+    $$('[data-mirror]').forEach(function(el){var k=el.dataset.mirror;el.textContent=k==='camtag'?val('f-gear').split(',')[0].trim():k==='mono'?fullName().trim().split(/\s+/).map(function(w){return w.charAt(0)}).join('').slice(0,3).toUpperCase():val(k)});
+    var tk=val('tiktok').trim().replace(/^@/,''), ig=val('instagram').trim().replace(/^@/,'');
+    $$('[data-link="tiktok"]').forEach(function(a){a.href='https://www.tiktok.com/@'+encodeURIComponent(tk)});
+    $$('[data-link="instagram"]').forEach(function(a){a.href='https://www.instagram.com/'+encodeURIComponent(ig)});
+  }
+  function paint(){
+    $$('[data-k]').forEach(function(el){el.textContent=val(el.dataset.k)});
+    $$('[data-img]').forEach(function(el){
+      var d=state.img[el.dataset.img]||el.dataset.src||'';
+      el.style.backgroundImage=d?'url("'+d+'")':'';
+      el.classList.toggle('has-img',!!d);
+      var w=$('.wip',el); if(w)w.hidden=!!d;
+      var v=$('.vid',el); if(v)v.hidden=!!state.img[el.dataset.img];
+      var u=$('.up',el); u.textContent=d?'Cambiar':'Subir foto';
+      if(w)u.hidden=!editing;
+    });
+    sync(); number(folio);
+  }
+
+  /* ----- editing ----- */
+  var editing=false;
+  paint();
+  function setEditing(on){
+    editing=on;
+    document.body.classList.toggle('editing',on);
+    editBtn.setAttribute('aria-pressed',on?'true':'false');
+    editBtn.textContent=on?'Listo':'Editar';
+    resetBtn.hidden=!on;
+    $$('[data-k]').forEach(function(el){
+      if(on){el.setAttribute('contenteditable','true');el.setAttribute('spellcheck','false')}
+      else{el.removeAttribute('contenteditable')}
+    });
+    paint();
+    say(on?'Tocá un texto para cambiarlo o "Cambiar" sobre una foto. Los cambios se guardan en este navegador.':'Listo. Podés descargar el PDF cuando quieras.');
+  }
+  editBtn.addEventListener('click',function(){setEditing(!editing)});
+  folio.addEventListener('input',function(e){
+    var el=e.target.closest&&e.target.closest('[data-k]'); if(!el)return;
+    state.text[el.dataset.k]=el.textContent; save(); sync();
+  });
+  folio.addEventListener('paste',function(e){
+    var el=e.target.closest&&e.target.closest('[data-k]'); if(!el)return;
+    e.preventDefault();
+    var t=(e.clipboardData||window.clipboardData).getData('text').replace(/\s+/g,' ');
+    document.execCommand('insertText',false,t);
+  });
+  folio.addEventListener('keydown',function(e){
+    if(e.key==='Enter'&&e.target.closest&&e.target.closest('[data-k]')){e.preventDefault();e.target.blur()}
+  });
+  folio.addEventListener('click',function(e){
+    if(editing&&e.target.closest('a'))e.preventDefault();
+    var up=e.target.closest('.up');
+    if(up){fileIn.dataset.slot=up.parentNode.dataset.img;fileIn.value='';fileIn.click()}
+  });
+  var armed=false;
+  resetBtn.addEventListener('click',function(){
+    if(!armed){armed=true;resetBtn.textContent='Confirmar: deshacer cambios';setTimeout(function(){armed=false;resetBtn.textContent='Restablecer'},4000);return}
+    armed=false;resetBtn.textContent='Restablecer';
+    state={text:{},img:{}};save();paint();say('Se deshicieron los cambios hechos en este navegador.');
+  });
+
+  /* ----- photos: downscaled and kept in this browser ----- */
+  fileIn.addEventListener('change',function(){
+    var f=fileIn.files&&fileIn.files[0], slot=fileIn.dataset.slot; if(!f||!slot)return;
+    var r=new FileReader();
+    r.onload=function(){
+      var im=new Image();
+      im.onload=function(){
+        var m=900, k=Math.min(1,m/Math.max(im.width,im.height));
+        var c=document.createElement('canvas'); c.width=Math.round(im.width*k); c.height=Math.round(im.height*k);
+        var x=c.getContext('2d'); x.fillStyle='#FFFFFF'; x.fillRect(0,0,c.width,c.height); x.drawImage(im,0,0,c.width,c.height);
+        state.img[slot]=c.toDataURL('image/jpeg',.8);
+        var ok=save(); paint();
+        say(ok?'Foto cargada.':'Foto cargada, pero ya no entra en la memoria del navegador: sale en el PDF de ahora y se pierde al recargar.');
+      };
+      im.onerror=function(){say('No se pudo leer esa imagen. Probá con un JPG o PNG.')};
+      im.src=r.result;
+    };
+    r.readAsDataURL(f);
+  });
+
+  /* ----- copy email ----- */
+  $('#copy').addEventListener('click',function(){
+    var b=this, t=val('email');
+    var done=function(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar'},1500)};
+    try{navigator.clipboard.writeText(t).then(done,sel)}catch(e){sel()}
+    function sel(){var r=document.createRange();r.selectNodeContents($('[data-k="email"]'));var s=getSelection();s.removeAllRanges();s.addRange(r)}
+  });
+
+  /* ----- PDF ----- */
+  var downloads=null;
+  var ready=Promise.resolve({save:function(o){var u=URL.createObjectURL(o.data),a=document.createElement('a');a.href=u;a.download=o.filename;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u)},5000);return Promise.resolve({status:'saved'})}});
+  ready.then(function(d){
+    downloads=d;
+    if(d){pdfBtn.disabled=false;pdfmBtn.disabled=false}
+    else{pdfBtn.hidden=true;pdfmBtn.hidden=true;say('La descarga en PDF no está disponible en este navegador.')}
+  });
+
+  function prepare(mobile){
+    var stage=document.createElement('div'); stage.className='stage'; if(mobile)stage.style.width='430px';
+    var clone=folio.cloneNode(true); clone.removeAttribute('id'); clone.classList.add('pdf'); if(mobile)clone.classList.add('m');
+    $$('[contenteditable]',clone).forEach(function(el){el.removeAttribute('contenteditable')});
+    $$('.pre',clone).forEach(function(el){el.classList.remove('pre')});
+    number(clone);
+    stage.appendChild(clone); document.body.appendChild(stage);
+    return stage;
+  }
+  /* the two PDF libraries load only when a PDF is asked for, so photos never wait on them */
+  var libs=null;
+  function loadScript(src){return new Promise(function(ok,no){var el=document.createElement('script');el.src=src;el.onload=ok;el.onerror=function(){no(new Error('lib'))};document.head.appendChild(el)})}
+  function loadLibs(){
+    if(window.html2canvas&&window.jspdf)return Promise.resolve();
+    if(!libs)libs=loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js').then(function(){return loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js')}).catch(function(e){libs=null;throw e});
+    return libs;
+  }
+  async function buildPdf(mobile){
+    await loadLibs();
+    var stage=prepare(mobile);
+    try{
+      if(document.fonts&&document.fonts.ready)await document.fonts.ready;
+      var pw=mobile?430:1123, k=mobile?.75:841.89/1123, pdf=null;
+      var sheets=$$('.sheet',stage);
+      for(var i=0;i<sheets.length;i++){
+        var sh=sheets[i], ph=mobile?Math.ceil(sh.getBoundingClientRect().height):794;
+        var size=[pw*k,ph*k], ori=ph>pw?'portrait':'landscape';
+        if(!pdf)pdf=new window.jspdf.jsPDF({unit:'pt',format:size,orientation:ori,compress:true}); else pdf.addPage(size,ori);
+        var canvas=await window.html2canvas(sh,{scale:mobile?2.5:2,backgroundColor:getComputedStyle(document.body).getPropertyValue('--paper').trim()||'#F3F1EC',useCORS:true,logging:false,width:pw,height:ph});
+        pdf.addImage(canvas.toDataURL('image/jpeg',.92),'JPEG',0,0,size[0],size[1]);
+        var o=sh.getBoundingClientRect();
+        $$('a[href^="http"]',sh).forEach(function(a){
+          var r=a.getBoundingClientRect();
+          pdf.link((r.left-o.left)*k,(r.top-o.top)*k,r.width*k,r.height*k,{url:a.href});
+        });
+      }
+      return {blob:pdf.output('blob'),pages:sheets.length};
+    }finally{stage.remove()}
+  }
+  function wire(btn,mobile){
+    btn.addEventListener('click',async function(){
+      if(!downloads)return;
+      pdfBtn.disabled=pdfmBtn.disabled=true; say('Armando el PDF…');
+      try{
+        var out=await buildPdf(mobile);
+        var slug=fullName().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'creadora';
+        await downloads.save({filename:'portfolio-ugc-'+slug+'-editorial'+(mobile?'-movil':'')+'.pdf',data:out.blob});
+        say('PDF descargado, '+out.pages+' páginas.');
+      }catch(e){
+        var c=e&&e.code;
+        if(c==='declined')say('Descarga cancelada.');
+        else if(c==='rate_limited')say('Ya hay una descarga abierta. Esperá un momento y probá de nuevo.');
+        else if(c)say('La descarga no está disponible en este navegador.');
+        else say('No se pudo armar el PDF. Recargá la página y probá de nuevo.');
+      }
+      pdfBtn.disabled=pdfmBtn.disabled=false;
+    });
+  }
+  wire(pdfBtn,false); wire(pdfmBtn,true);
+  /* ----- day / night ----- */
+  var themeBtn=$('#theme'), night=true;
+  try{var tv=localStorage.getItem(KEY+'-theme'); if(tv==='day')night=false}catch(e){}
+  function setTheme(){document.body.classList.toggle('night',night);themeBtn.textContent=night?'Modo día':'Modo noche'}
+  setTheme();
+  themeBtn.addEventListener('click',function(){night=!night;setTheme();try{localStorage.setItem(KEY+'-theme',night?'night':'day')}catch(e){}});
+
+  /* ----- motion ----- */
+  /* follower figures count up once, keeping the written format (5.834 / 10,4k) */
+  function countUp(el){
+    var txt=el.textContent.trim(), m=/^(\d[\d.,]*)\s*([kKmM]?)$/.exec(txt); if(!m||editing)return;
+    var suf=m[2], dec=0, end;
+    if(suf){var parts=m[1].split(',');dec=parts[1]?parts[1].length:0;end=parseFloat(m[1].replace(',','.'))}
+    else end=parseInt(m[1].replace(/[.,]/g,''),10);
+    if(!isFinite(end))return;
+    var t0=null, dur=1300;
+    function fmt(v){return suf?v.toFixed(dec).replace('.',',')+suf:String(Math.round(v)).replace(/\B(?=(\d{3})+(?!\d))/g,'.')}
+    function step(t){
+      if(t0===null)t0=t;
+      var k=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-k,3);
+      if(k<1&&!editing){el.textContent=fmt(end*e);requestAnimationFrame(step)}else el.textContent=val(el.dataset.k);
+    }
+    requestAnimationFrame(step);
+  }
+  var calm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var vids=$$('.vid',folio);
+  if(calm){vids.forEach(function(v){v.controls=true})}
+  if(!calm&&'IntersectionObserver' in window){
+    $$('.sheet',folio).forEach(function(sh){
+      $$('h1,h2,.say,.label,.lead,.txt .muted,.socials li,.mark,.bleed .pic,.strip figure,.facts>div,.formats li,.specs,.brands li,.rows li',sh)
+        .forEach(function(el,i){el.classList.add('rv');el.style.setProperty('--i',Math.min(i,12))});
+      sh.classList.add('pre');
+    });
+    folio.classList.add('anim');
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target);$$('.brands strong',e.target).forEach(countUp)}
+    })},{threshold:.12});
+    $$('.sheet',folio).forEach(function(sh){io.observe(sh)});
+    var vo=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){var pr=e.target.play();if(pr&&pr.catch)pr.catch(function(){})}else e.target.pause();
+    })},{threshold:.25});
+    vids.forEach(function(v){vo.observe(v)});
+  }
+  window.__prepare=prepare;
+})();
+</script>
+
+</body>
+</html>
